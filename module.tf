@@ -6,4 +6,6 @@ module "vpc" {
   TAGS            = var.TAGS
   NODE_TYPE       = var.NODE_TYPE
   NUMBER_OF_NODES = var.NUMBER_OF_NODES
+  HOSTED_ZONE_ID  = data.terraform_remote_state.route53.outputs.HOSTED_ZONE_ID
+  HOSTED_ZONE_NAME= data.terraform_remote_state.route53.outputs.HOSTED_ZONE_NAME
 }
